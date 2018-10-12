@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="{% url 'index' %}">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'app_one:list' %}">List</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
+  </li>
+
+</ul>
+
+<div class="container">
+    <div class="jumbotron">
+        {% block body_block %}
+        {% endblock %}
+
+    </div>
+
+</div>
+</body>
+</html>

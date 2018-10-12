@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+    <title>List</title>
+<h1>Here is the list of Schools</h1>
+{% for school in school_list %}
+<li>
+    <a href="{{ school.id }}">{{ school.name }}</a>
+
+</li>
+{% endfor %}
+{% endblock %}
